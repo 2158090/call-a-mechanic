@@ -13,13 +13,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+        /*
+        loginButton.setOnClickListener {
+            startActivities(Intent(this, loginPage::class.java))
+        }
 
         signupButton.setOnClickListener {
             startActivities(Intent(this, signuppage::class.java))
         }
+        */
+        signupButton.setOnClickListener {
+            startActivity(Intent(this, signupButton::class.java))
+        }
 
         loginButton.setOnClickListener {
-            startActivities(Intent(this, loginPage::class.java))
+            startActivity(Intent(this, loginButton::class.java))
         }
     }
 }
